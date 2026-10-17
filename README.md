@@ -15,10 +15,9 @@ The built-in sample generator works without an account or internet. To try the l
 ollama run qwen2.5:3b
 ```
 
-3. After the model loads, open a second Command Prompt and run:
+3. After the model loads, open a second Command Prompt, change into the downloaded `classkit-kampala` folder, and run:
 
 ```cmd
-cd "C:\Users\lenovo\Documents\ChatGPT\kampala leafe letes\classkit-kampala"
 node server.mjs
 ```
 
