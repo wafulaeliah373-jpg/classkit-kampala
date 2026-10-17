@@ -1,0 +1,11 @@
+# Local-only submission notes and personal environment files
+DEV-SUBMISSION-DRAFT.md
+.env
+.env.*
+!.env.example
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

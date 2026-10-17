@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f5ef">
+  <title>ClassKit Kampala — lesson materials, ready when you are</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="ClassKit Kampala home"><span class="brand-mark">C<span>+</span></span><span class="brand-copy"><span>classkit <b>kampala</b></span><small>by Eliah Festus Wafula</small></span></a>
+    <div class="top-meta"><span class="offline-dot"></span> Works offline <span class="divider">·</span> Your work stays on this device</div>
+  </header>
+  <main>
+    <section class="intro">
+      <div class="eyebrow">A little more time for teaching <span>✳</span></div>
+      <h1>Good lessons,<br><em>without the late night.</em></h1>
+      <p>Build a lesson outline and printable practice sheet around the topic your class is learning. Start with a draft, then make it yours.</p>
+    </section>
+
+    <section class="workspace" aria-label="Lesson builder">
+      <form class="setup" id="lesson-form">
+        <div class="section-label"><span class="step">01</span> Tell us about your lesson</div>
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject"><option>Mathematics</option><option>English</option><option>Science</option><option>Social Studies</option></select>
+        <div class="field-row">
+          <div><label for="class-level">Class</label><select id="class-level"><option>Primary 6</option><option>Primary 5</option><option>Primary 7</option><option>Primary 4</option><option>Senior 1</option><option>Senior 2</option></select></div>
+          <div><label for="duration">Duration</label><select id="duration"><option value="40">40 minutes</option><option value="60">1 hour</option><option value="80">1 hour 20 min</option></select></div>
+        </div>
+        <label for="topic">Today's topic</label>
+        <input id="topic" name="topic" value="Adding fractions" maxlength="100" required>
+        <label for="context">Make it familiar <span class="optional">optional</span></label>
+        <input id="context" name="context" placeholder="e.g. sharing matooke at home" maxlength="100">
+        <div class="model-box">
+          <div class="model-heading"><span class="model-icon">✳</span><div><b>Draft with local AI</b><small>Your lesson stays on this computer.</small></div></div>
+          <label class="toggle-label"><input type="checkbox" id="use-ai"><span class="toggle"></span> Use an Ollama model</label>
+          <div id="model-options" class="model-options" hidden>
+            <label for="model-name">Model name</label><input id="model-name" value="qwen2.5:3b" spellcheck="false">
+            <p>Install a model with Ollama first. <a href="https://ollama.com/download" target="_blank" rel="noreferrer">Get Ollama ↗</a></p>
+          </div>
+        </div>
+        <button class="create-button" type="submit"><span>Make my lesson</span><span aria-hidden="true">↗</span></button>
+        <p class="privacy-note">No account. No student data. Just a useful first draft.</p>
+      </form>
+
+      <section class="result" aria-live="polite">
+        <div class="result-head"><div><div class="section-label"><span class="step">02</span> Your lesson draft</div><p id="result-subtitle">A ready-to-edit starting point</p></div><div class="actions"><button type="button" class="quiet-button" id="download-btn" title="Download as a text document" disabled>↓ <span>Download</span></button><button type="button" class="print-button" id="print-btn" disabled>Print lesson</button></div></div>
+        <div id="status" class="status" role="status">Your lesson will appear here. Change the topic or class to get started.</div>
+        <article id="lesson" class="lesson" contenteditable="true" aria-label="Editable lesson draft" hidden></article>
+        <div class="result-foot" id="result-foot" hidden><span>✎</span> Click any text to edit before printing.</div>
+      </section>
+    </section>
+    <footer><span>Made for the teachers who make everything possible.</span><span class="footer-brand">ClassKit Kampala <b>✳</b><small>by Eliah Festus Wafula</small></span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
